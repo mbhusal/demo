@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<title>div print</title>
+</head>
+
+
+<body>
+<input name="b_print" type="button" class="ipt"   onClick="printdiv('div_print');" value=" Print ">
+
+
+<div id="div_print">
+
+
+<p style="Color:Red">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<div>kdsjfkjdsk Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+</body>
+
+
+<script language="javascript">
+function printdiv(printpage)
+{
+var headstr = "<html><head><title> here is title. </title></head><body>";
+var footstr = "</body>";
+var newstr = document.all.item(printpage).innerHTML;
+var oldstr = document.body.innerHTML;
+document.body.innerHTML = headstr+newstr+footstr;
+window.print();
+document.body.innerHTML = oldstr;
+return false;
+}
+</script>
+
+
+</html>
+
