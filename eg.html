@@ -1,0 +1,18 @@
+<VirtualHost *:80>
+ServerName ecommerce.local
+ServerAlias www.ecommerce.local
+
+ServerAdmin webmaster@localhost
+DocumentRoot /var/www/html/self_made/ecommerce/public/
+
+<Directory /var/www/html/ecommerce/>
+Options Indexes FollowSymLinks MultiViews
+AllowOverride All
+Order allow,deny
+allow from all
+</Directory>
+
+
+ErrorLog ${APACHE_LOG_DIR}/error.log
+CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
